@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  min-height: 100vh;
+  background: black;
+
+}
+
+.navigator {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: gray;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition-delay: 0.8s;
+  box-shadow: 10px 15px 20px white;
+  margin-left: 600px;
+  margin-top: 200px;
+}
+
+.navigator.active {
+  width: 250px;
+  height: 250px;
+  transition-delay: 0s;
+}
+
+.navigator span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(calc(15px * var(--x)), calc(15px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.navigator.active span {
+  width: 55px;
+  height: 55px;
+  background: rgb(174, 170, 170);
+  transform: translate(calc(70px * var(--x)), calc(70px * var(--y)));
+}
+
+.navigator span ion-icon {
+  transition: 0.5s;
+  font-size: 0;
+}
+
+.navigator.active span ion-icon {
+  font-size: 40px;
+  color: aqua;
+}
+
+.navigator.active span:hover ion-icon {
+  color: blue;
+}
+
+.header {
+  height: 50px;
+  background: grey;
+  width: 100%;
+}
+
+.header a {
+  display: inline-flex;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.header a:hover {
+  color: red;
+}

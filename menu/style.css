@@ -1,0 +1,113 @@
+* {
+  font-family: 'Times New Roman', serif;
+  box-sizing: border-box;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(186, 184, 184);
+}
+
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+  margin: 30px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  background: rgb(45, 42, 42);
+  width: 250px;
+  padding: 15px;
+  z-index: var(--i);
+  transition: 1s;
+}
+
+ul li:hover {
+  background: green;
+  transform: translateX(-50px);
+}
+
+.ul li:hover {
+  transform: translateX(50px);
+  background: red;
+}
+
+.ul1 li:hover {
+  transform: translateY(50px);
+  background: blue;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: rgb(70, 69, 69);
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 1s;
+}
+
+ul li:hover::before {
+  background: green;
+}
+
+.ul li:hover::before {
+  background: red;
+}
+
+.ul1 li:hover::before {
+  background: blue;
+}
+
+ul li::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgb(72, 71, 71);
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 1s;
+}
+
+ul li:hover::after {
+  background: green;
+}
+
+.ul li:hover::after {
+  background: red;
+}
+
+.ul1 li:hover::after {
+  background: blue;
+}
+
+ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  transition: 1s;
+  letter-spacing: 10px;
+  color: rgb(130, 130, 121);
+}
+
+ul li:hover a {
+  color: white;
+}
+
+ul li:last-child::after {
+  box-shadow: -100px 100px 20px black;
+}
