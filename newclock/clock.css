@@ -15,7 +15,10 @@ body {
 .container {
   position: relative;
   min-height: 500px;
-  box-shadow: 20px 20px 55px 20px black;
+  box-shadow: 10px 10px 55px black,
+    10px 10px 25px black,
+    5px 5px 50px black,
+    10px 10px 50px black;
   border-radius: 20px;
 }
 
@@ -25,11 +28,12 @@ body {
   height: 450px;
   border-radius: 50%;
   background-color: rgb(57, 54, 54);
-  box-shadow: 10px 10px 50px 10px black;
+  box-shadow: 10px 10px 30px 20px black;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+  z-index: 10000;
 }
 
 .clock::before {
@@ -39,15 +43,16 @@ body {
   height: 10px;
   background-color: white;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .clock span {
   position: absolute;
   inset: 20px;
-  color: white;
   transform: rotate(calc(30deg * var(--i)));
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
+  color: white;
 }
 
 .circle {
@@ -100,9 +105,9 @@ body {
   margin-bottom: 50px;
   font-weight: 600;
   border: 2px solid black;
-  width: 210px;
+  width: 230px;
   border-radius: 20px;
-  box-shadow: 5px 5px 20px gray;
+  box-shadow: 15px 15px 30px black;
 }
 
 .time div {
@@ -124,4 +129,6 @@ body {
 
 .pmam {
   color: yellow;
+  font-size: 20px;
+  padding: 5px;
 }

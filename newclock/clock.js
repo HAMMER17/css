@@ -29,8 +29,8 @@ setInterval(() => {
   hh = (hh < 10) ? '0' + hh : hh
   mm = (mm < 10) ? '0' + mm : mm
   ss = (ss < 10) ? '0' + ss : ss
-  hr1.innerHTML = hh
-  mn1.innerHTML = mm
-  sc1.innerHTML = ss
+  hr1.innerHTML = hh + ':'
+  mn1.innerHTML = mm + ':'
+  sc1.innerHTML = ss + '.'
   am.innerHTML = am
 }, 1000)
