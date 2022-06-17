@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(56, 54, 54);
+}
+
+.container {
+  position: relative;
+  min-height: 500px;
+  box-shadow: 20px 20px 55px 20px black;
+  border-radius: 20px;
+}
+
+.clock {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background-color: rgb(57, 54, 54);
+  box-shadow: 10px 10px 50px 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.clock span {
+  position: absolute;
+  inset: 20px;
+  color: white;
+  transform: rotate(calc(30deg * var(--i)));
+  text-align: center;
+  font-size: 25px;
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.circle1 {
+  width: 240px;
+  height: 240px;
+}
+
+.circle2 {
+  width: 180px;
+  height: 180px;
+}
+
+.circle i {
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  background: var(--sir);
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 15px;
+  height: 15px;
+  background: var(--sir);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--sir),
+    0 0 20px var(--sir);
+}
+
+.time {
+  display: flex;
+  padding: 10px 20px;
+  margin-left: 120px;
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  border: 2px solid black;
+  width: 210px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.time div {
+  position: relative;
+  margin: 5px;
+}
+
+.seconds {
+  color: red;
+}
+
+.minutes {
+  color: rgb(10, 205, 10);
+}
+
+.hour {
+  color: rgb(26, 222, 199);
+}
+
+.pmam {
+  color: yellow;
+}
